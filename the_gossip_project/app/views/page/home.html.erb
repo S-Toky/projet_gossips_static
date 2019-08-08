@@ -1,0 +1,19 @@
+
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <% @gossip.each do |gossips| %> 
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text"> 
+    	<%= "Author : " %>
+		<% user = gossips.user_id %> 
+		<%= User.find(user).first_name %></br>
+		<%= "Gossip title : " %><%=gossips.title%> </br>
+	</p>
+    <a href="/profil/id " class="btn btn-primary">voir le profil </a>
+  </div>
+  <%end%>
+</div>
