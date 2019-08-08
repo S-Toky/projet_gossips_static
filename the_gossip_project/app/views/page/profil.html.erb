@@ -1,0 +1,17 @@
+<body>
+  <h2 style="text-align: center;">Voici la liste des potins</h2>
+  <%= @gossips.each_with_index do |gossip, index|%>
+<div class="card text-center">
+  <div class="card-header">
+    <%= gossip.title%>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.content %></h5>
+    <%= link_to "Show", root_path(gossip.id)%>
+  </div>
+
+</div>
+
+<%end%>
+  
+</body>
